@@ -39,7 +39,7 @@ function App() {
     }
 
     //otherwise go to next player
-    if (currentPlayer === "X") SetPlayer("0");
+    if (currentPlayer === "X") SetPlayer("O");
     else {
       SetPlayer("X");
     }
@@ -64,7 +64,7 @@ function App() {
   };
 
   const checkTieGame = () => {
-    return board.every((space) => space === "X" || space === "0");
+    return board.every((space) => space === "X" || space === "O");
   };
 
   const onResetClick = () => {
