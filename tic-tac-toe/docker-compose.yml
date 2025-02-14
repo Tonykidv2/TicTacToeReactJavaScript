@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  vite-app:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app # Sync files for hot reload
+      - /app/node_modules # Prevent overwriting node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Ensure file watching works inside Docker
+      - VITE_HOST=0.0.0.0 # Allow access from outside the container

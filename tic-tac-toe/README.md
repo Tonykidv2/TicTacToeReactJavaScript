@@ -21,3 +21,7 @@ docker run -p 5173:5173 tic-tac-toe:dev
 **app should now be running in the background**
 
 go here: http://localhost:5173/ or whatever link the command window spits out after the run command finishes.
+
+## to have file watching or hot reloading while using docker use this commend instead of using docker build & docker run
+
+docker-compose up
